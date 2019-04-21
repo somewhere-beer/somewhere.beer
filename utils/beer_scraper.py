@@ -80,7 +80,7 @@ def parse_beer_page(beer_page):
 def extract_beer_info(beer_page_soup):
     """
     Takes in a `BeautifulSoup` object representing a parsed beer page.
-    Returns a list containing the beer's name, style, brewer, ABV, and IBU.
+    Returns a list containing the beer's name, style, ABV, IBU, and brewer.
 
     >>> s = requests.Session()
     >>> page = s.get("https://catalog.beer/beer/95c61c88-e053-ca90-ecca-90da512ca3c0")
