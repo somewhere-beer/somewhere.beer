@@ -12,7 +12,7 @@ def retrieve_beers_page(session, base_url, page_number):
     """
     Takes in a `requests` Session object, a base URL, and a page number.
     Constructs a URL of a page of beers and returns a `requests` object representing a page of beers from the catalog.
-
+    
     >>> s = requests.Session()
     >>> print(retrieve_beers_page(s, "https://catalog.beer", 1))
     <Response [200]>
@@ -22,16 +22,16 @@ def retrieve_beers_page(session, base_url, page_number):
     return session.get(url, params=payload)
 
 def parse_beers_page(beers_page):
-	"""
-	Takes in a `requests` object representing a page of beers from the catalog.
+    """
+    Takes in a `requests` object representing a page of beers from the catalog.
     Returns the parsed version of the page as a `BeautifulSoup` object.
-    
+
     >>> s = requests.Session()
     >>> page = s.get("https://catalog.beer/beer?page=1")
     >>> print(parse_beers_page(page).find("div", "col").find("p").text)
     Page 1 of 141
-	"""
-	return BeautifulSoup(beers_page.text, "html.parser")
+    """
+    return BeautifulSoup(beers_page.text, "html.parser")
 
 def extract_beer_links(beers_page_soup):
     """
@@ -66,7 +66,7 @@ def retrieve_beer_page(session, base_url, beer_url):
 
 def parse_beer_page(beer_page):
     """
-	Takes in a `requests` object representing a unique beer page from the catalog.
+    Takes in a `requests` object representing a unique beer page from the catalog.
     Returns the parsed version of the page as a `BeautifulSoup` object.
 
     >>> s = requests.Session()
@@ -74,7 +74,7 @@ def parse_beer_page(beer_page):
     >>> soup = BeautifulSoup(page.text, "html.parser")
     >>> print(soup.find("h1").text)
     “18” Imperial IPA 2
-	"""
+    """
     return BeautifulSoup(beer_page.text, "html.parser")
 
 def extract_beer_info(beer_page_soup):
