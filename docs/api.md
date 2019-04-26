@@ -18,12 +18,15 @@ Example response:
   "ABV": 6.0,
   "IBU": 37,
   "featured": false,
-  "images": ["/media/pictures/beer_1_photo1", "/media/pictures/beer_1_photo2"],
+  "images": [
+    "/media/pictures/beer_1_photo1",
+    "/media/pictures/beer_1_photo2"
+  ],
   "description": "Robust and complex, our Porter is a bittersweet tribute to the legendary freighter fallen crew--taken too soon when the gales of November came early.",
   "staffReviews": [
     {
       "staffMember": "thomas",
-      "review": "A nice porter that dosen’ t carry to heavy into the chocolate side of the roast flavor"
+      "review": "A nice porter that doesn’t carry too heavy into the chocolate side of the roast flavor"
     },
     {
       "staffMember": "david",
@@ -86,7 +89,10 @@ Example response:
       "ABV": 6.0,
       "IBU": 37,
       "featured": false,
-      "images": ["/media/pictures/beer_1_photo1", "/media/pictures/beer_1_photo2"],
+      "images": [
+        "/media/pictures/beer_1_photo1",
+        "/media/pictures/beer_1_photo2"
+      ],
       "description": "Robust and complex,our Porter is a bittersweet tribute to the legendary freighter fallen crew--taken too soon when the gales of November came early.",
       "staffReviews": [
         {
@@ -107,7 +113,9 @@ Example response:
       "ABV": 5.6,
       "IBU": null,
       "featured": false,
-      "images": ["/media/pictures/beer_458_photo1"],
+      "images": [
+        "/media/pictures/beer_458_photo1"
+      ],
       "description": "A blend of specially roasted pale, caramel, chocolate, and black malts, along with our top-fermenting yeast, creates complexity without bitterness. The brew is hopped at a high rate, and naturally carbonated. The result is dark in the glass, but surprisingly light on the palate.",
       "staffReviews": [
         {
@@ -115,8 +123,8 @@ Example response:
           "review": "One of my favorite American dark beers"
         },
         {
-            "staffMember": "david",
-            "review": "Low head for a porter, but a very smooth finish and has a warm caramel smell to it"
+          "staffMember": "david",
+          "review": "Low head for a porter, but a very smooth finish and has a warm caramel smell to it"
         }
       ]
     }
@@ -144,7 +152,10 @@ Example response:
       "ABV": 6.0,
       "IBU": 37,
       "featured": false,
-      "images": ["/media/pictures/beer_1_photo1", "/media/pictures/beer_1_photo2"],
+      "images": [
+        "/media/pictures/beer_1_photo1",
+        "/media/pictures/beer_1_photo2"
+      ],
       "description": "Robust and complex,our Porter is a bittersweet tribute to the legendary freighter fallen crew--taken too soon when the gales of November came early.",
       "staffReviews": [
         {
@@ -165,7 +176,9 @@ Example response:
       "ABV": 5.6,
       "IBU": null,
       "featured": false,
-      "images": ["/media/pictures/beer_458_photo1"],
+      "images": [
+        "/media/pictures/beer_458_photo1"
+      ],
       "description": "A blend of specially roasted pale, caramel, chocolate, and black malts, along with our top-fermenting yeast, creates complexity without bitterness. The brew is hopped at a high rate, and naturally carbonated. The result is dark in the glass, but surprisingly light on the palate.",
       "staffReviews": [
         {
@@ -198,7 +211,9 @@ Example response:
   "ABV": 4.8,
   "IBU": null,
   "featured": true,
-  "images": ["/media/pictures/beer_5669_photo1"],
+  "images": [
+    "/media/pictures/beer_5669_photo1"
+  ],
   "description": "A amerian made bavarian-style wheat beer with a warm and sweet flavor",
   "staffReviews": [
     {
