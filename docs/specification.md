@@ -50,7 +50,8 @@ The lower-left majority of the landing page is the featured beer section, titled
 - ABV
 - IBU
 - Beer type (i.e., ale or lager)
-- Beer style (subtype from ale or lager; e.g., IPA, porter, stout)
+- Beer style category (subtype from ale or lager; e.g., IPA, porter, stout)
+- Beer style
 - Country of origin
 - Brewery
 
