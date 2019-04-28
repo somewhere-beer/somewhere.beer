@@ -41,6 +41,7 @@ Example response:
 ### Request: Get [somewhere.beer/api/textSearch/california](https://somewhere.beer/api/textSearch/california)
 
 In this case, "california" was entered into the search textbox.
+Note the text search is not case sensitive
 
 Example response:
 ```json
@@ -68,7 +69,7 @@ Example response:
 
 ### Request: Get [somewhere.beer/api/attributeSearch/abv-null_ibu-null_type-porter_brewery-null](https://somewhere.beer/api/attributeSearch/abv-null_ibu-null_type-porter_brewery-null)
 
-In this case, the type "Porter" was selected from the attribute search menu.
+In this case, the type "Porter" was typed in on the attribute search menu.
 
 Example response:
 ```json
@@ -134,14 +135,16 @@ Example response:
 
 ## Get category 
 
-### Request: Get [somewhere.beer/api/category/american-porter](https://somewhere.beer/api/category/american-porter)
+### Request: Get [somewhere.beer/api/category/porter](https://somewhere.beer/api/category/porter)
 
-In this case, "American Porter" is the category of the beer to retrieve.
+In this case, "Porter" is the category of the beer to retrieve.
+For a list of the valid categories see the category breakdown sheet.
+Note that non-valid category values in the case will have a null returned
 
 Example response:
 ```json
 {
-  "category": "american porter",
+  "category": "Porter",
   "numberFound": 2,
   "beers": [
     {
