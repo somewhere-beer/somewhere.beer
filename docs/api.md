@@ -9,60 +9,68 @@
 In this case, we're retrieving the beer with a `beerId` of 1.
 The id query param is reguired, if no value is given to this param a error is returned
 
-Example response:
+Current live response to that call:
 ```json
 {
-  "beerId": 1,
-  "beerName": "Edmund Fitzgerald Porter",
-  "beerStyle": "American Porter",
-  "brewery": "Great Lakes Brewing Co",
-  "ABV": 6.0,
-  "IBU": 37,
-  "featured": false,
-  "images": [
-    "/media/pictures/beer_1_photo1",
-    "/media/pictures/beer_1_photo2"
-  ],
-  "description": "Robust and complex, our Porter is a bittersweet tribute to the legendary freighter fallen crew--taken too soon when the gales of November came early.",
-  "staffReviews": [
-    {
-      "staffMember": "thomas",
-      "review": "A nice porter that doesn’t carry too heavy into the chocolate side of the roast flavor"
-    },
-    {
-      "staffMember": "david",
-      "review": "A enjoyable nice rich Porter, complex yet drinkable"
-    }
-  ]
+    "beerId": 1,
+    "featured": true,
+    "images": [
+        "/pictues/notthere.img"
+    ],
+    "ABV": 5,
+    "beerName": "test beer",
+    "brewery": "test",
+    "description": "this is a test record",
+    "IBU": 33,
+    "staffReviews": [
+        {
+            "staffMember": "thomas",
+            "review": "this was a good imaginary beer"
+        }
+    ],
+    "beerStyle": "the best style"
 }
 ```
 
 ## Text search
 
-### Request: Get [somewhere.beer/api/textSearch/california](https://somewhere.beer/api/textSearch/california)
+### Request: Get [http://somewhere.beer/WebAccess/api/textSearch?target=steam](http://somewhere.beer/WebAccess/api/textSearch?target=steam)
 
-In this case, "california" was entered into the search textbox.
-Note the text search is not case sensitive
+In this case, "steam" was search target.
+Note the text search is not case sensitive.
+Note the text search is inclusive, thus sub-word possitive hits will be returned.
+Note the text search compares againist the text of the beer name, brewery name, description, staff reviews and the beer style.
 
-Example response:
+Current abbreviated live response to that call:
 ```json
 {
-  "searchedFor": "california",
-  "numberFound": 1,
-  "beers": [
-    {
-      "beerId": 456,
-      "beerName": "Anchor California Lager",
-      "brewery": "Anchor Brewing Company",
-      "beerStyle": "American Lager",
-      "ABV": 4.9,
-      "IBU": null,
-      "featured": false,
-      "images": null,
-      "description": "Anchor Steam's roots go back to the Gold Rush, long before icehouses and modern refrigeration made traditional lagers a viable California option. In 1876, thanks to an ice pond in the mountains and a belief that anything is possible in the Golden State, a little brewery named Boca created California's first genuine lager. Anchor California Lager is our re-creation of this historic American beer.",
-      "staffReviews": null
-    }
-  ]
+    "numberFound": 151,
+    "beers": [
+        {
+            "beerId": 640,
+            "featured": false,
+            "images": null,
+            "ABV": 5.3,
+            "beerName": "2X Steam",
+            "brewery": "Rupert’s Brew House ",
+            "description": null,
+            "IBU": null,
+            "staffReviews": null,
+            "beerStyle": "American-Style Pale Ale"
+        },
+        {
+            "beerId": 2347,
+            "featured": false,
+            "images": null,
+            "ABV": 5.5,
+            "beerName": "Amber Steam Style",
+            "brewery": "American Sky Brewing Co. ",
+            "description": null,
+            "IBU": 19,
+            "staffReviews": null,
+            "beerStyle": "American-Style Amber/Red Ale"
+        }
+    ]
 }
 ```
 
