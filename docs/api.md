@@ -4,9 +4,10 @@
 
 ## Get beer
 
-### Request: Get [somewhere.beer/api/beer/1](https://somewhere.beer/api/beer/1)
+### Request: Get [http://somewhere.beer/WebAccess/api/beer?id=1](http://somewhere.beer/WebAccess/api/beer?id=1)
 
 In this case, we're retrieving the beer with a `beerId` of 1.
+The id query param is reguired, if no value is given to this param a error is returned
 
 Example response:
 ```json
