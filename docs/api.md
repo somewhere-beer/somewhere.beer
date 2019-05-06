@@ -76,7 +76,7 @@ Current abbreviated live response to that call:
 
 ## Attribute search
 
-### Request: Get [http://somewhere.beer:80/WebAccess/api/attribueSearch?abv=&ibu=33&brewery=steam&type= ](http://somewhere.beer:80/WebAccess/api/attribueSearch?abv=&ibu=33&brewery=steam&type= )
+### Request: Get [http://somewhere.beer/WebAccess/api/attribueSearch?abv=&ibu=33&brewery=steam&type= ](http://somewhere.beer/WebAccess/api/attribueSearch?abv=&ibu=33&brewery=steam&type= )
 
 In this case, the search looked for beers that came from a brewery with steam in the name and a ibu of 33.
 Note all query parameters are reguired, thus for parameters that current search does not care about just asign no value.
@@ -137,66 +137,79 @@ Current live response:
 
 ## Get category 
 
-### Request: Get [somewhere.beer/api/category/porter](https://somewhere.beer/api/category/porter)
+### Request: Get [http://somewhere.beer/WebAccess/api/category?category=amber](http://somewhere.beer/WebAccess/api/category?category=amber)
 
-In this case, "Porter" is the category of the beer to retrieve.
+In this case, "Amber" is the category of the beer to retrieve.
 For a list of the valid categories see the category breakdown sheet.
-Note that non-valid category values in the case will have a null returned
+Note that non-valid category values in the case will have empty json is returned
+Note that most categories will build and return thousands of beer JSON objects
 
-Example response:
+Current abbreviated live response to that call:
 ```json
 {
-  "category": "Porter",
-  "numberFound": 2,
-  "beers": [
-    {
-      "beerId": 1,
-      "beerName": "Edmund Fitzgerald Porter",
-      "beerStyle": "American Porter",
-      "brewery": "Great Lakes Brewing Co",
-      "ABV": 6.0,
-      "IBU": 37,
-      "featured": false,
-      "images": [
-        "/media/pictures/beer_1_photo1",
-        "/media/pictures/beer_1_photo2"
-      ],
-      "description": "Robust and complex,our Porter is a bittersweet tribute to the legendary freighter fallen crew--taken too soon when the gales of November came early.",
-      "staffReviews": [
+    "numberFound": 1891,
+    "beers": [
         {
-          "staffMember": "thomas",
-          "review": "A nice porter that doesn’t carry too heavy into the chocolate side of the roast flavor"
+            "beerId": 54,
+            "featured": false,
+            "images": null,
+            "ABV": 5.7,
+            "beerName": "#amberale",
+            "brewery": "Mad Beach Craft Brewing Company ",
+            "description": null,
+            "IBU": null,
+            "staffReviews": null,
+            "beerStyle": "American-Style Amber/Red Ale"
         },
         {
-          "staffMember": "david",
-          "review": "A enjoyable nice rich Porter, complex yet drinkable"
-        }
-      ]
-    },
-    {
-      "beerId": 458,
-      "beerName": "Anchor Porter",
-      "beerStyle": "American Porter",
-      "brewery": "Anchor Steam",
-      "ABV": 5.6,
-      "IBU": null,
-      "featured": false,
-      "images": [
-        "/media/pictures/beer_458_photo1"
-      ],
-      "description": "A blend of specially roasted pale, caramel, chocolate, and black malts, along with our top-fermenting yeast, creates complexity without bitterness. The brew is hopped at a high rate, and naturally carbonated. The result is dark in the glass, but surprisingly light on the palate.",
-      "staffReviews": [
-        {
-          "staffMember": "thomas",
-          "review": "One of my favorite American dark beers"
+            "beerId": 80,
+            "featured": false,
+            "images": null,
+            "ABV": 5.8,
+            "beerName": "‘Merican",
+            "brewery": "Jekyll Brewing ",
+            "description": null,
+            "IBU": null,
+            "staffReviews": null,
+            "beerStyle": "American-Style Amber/Red Ale"
         },
         {
-          "staffMember": "david",
-          "review": "Low head for a porter, but a very smooth finish and has a warm caramel smell to it"
+            "beerId": 245,
+            "featured": false,
+            "images": null,
+            "ABV": 10.1,
+            "beerName": "11th Anniversary Ale",
+            "brewery": "Cigar City Brewing ",
+            "description": null,
+            "IBU": null,
+            "staffReviews": null,
+            "beerStyle": "American-Style Amber/Red Ale"
+        },
+        {
+            "beerId": 274,
+            "featured": false,
+            "images": null,
+            "ABV": 5.5,
+            "beerName": "13 Rebels ESB",
+            "brewery": "Crafty Dan ",
+            "description": null,
+            "IBU": 43,
+            "staffReviews": null,
+            "beerStyle": "American-Style Amber/Red Ale"
+        },
+        {
+            "beerId": 325,
+            "featured": false,
+            "images": null,
+            "ABV": 4.8,
+            "beerName": "1623 Brown Ale",
+            "brewery": "Coney Island Brewing Company ",
+            "description": null,
+            "IBU": 35,
+            "staffReviews": null,
+            "beerStyle": "American-Style Amber/Red Ale"
         }
-      ]
-    }
-  ]
+    ]
 }
 ``` 
 
