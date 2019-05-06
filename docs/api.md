@@ -215,33 +215,30 @@ Current abbreviated live response to that call:
 
 ## Get featured
 
-### Request: Get [somwhere.beer/api/featured](https://somewhere.beer/api/featured)
+### Request: Get [http://somewhere.beer/WebAccess/api/featured](http://somewhere.beer/WebAccess/api/featured)
 
-Returns the beer that is currently featured on the front page.
+Returns the beer that is currently featured.
+Note there is only ever one beer featured at a time.
 
-Example response:
+Current live response:
 ```json
 {
-  "beerId": 1029,
-  "beerName": "Kellerweis",
-  "beerStyle": "German Hefeweizen",
-  "brewery": "Sierra Nevada Brewing Co",
-  "ABV": 4.8,
-  "IBU": null,
-  "featured": true,
-  "images": [
-    "/media/pictures/beer_5669_photo1"
-  ],
-  "description": "A amerian made bavarian-style wheat beer with a warm and sweet flavor",
-  "staffReviews": [
-    {
-      "staffMember": "thomas",
-      "review": "Has smell notes of clove and slight banana. The taste is classic to the style"
-    },
-    {
-      "staffMember": "david",
-      "review": "Not a big wheat beer guy, but this is one of the better ones I have tried recently"
-    }
-  ]
+    "beerId": 1,
+    "featured": true,
+    "images": [
+        "/pictues/notthere.img"
+    ],
+    "ABV": 5,
+    "beerName": "test beer",
+    "brewery": "test",
+    "description": "this is a test record",
+    "IBU": 33,
+    "staffReviews": [
+        {
+            "staffMember": "thomas",
+            "review": "this was a good imaginary beer"
+        }
+    ],
+    "beerStyle": "the best style"
 }
 ```
