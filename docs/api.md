@@ -70,7 +70,8 @@ Current abbreviated live response to that call:
             "staffReviews": null,
             "beerStyle": "American-Style Amber/Red Ale"
         }
-    ]
+    ],
+        "searchedFor": "steam"
 }
 ```
 
