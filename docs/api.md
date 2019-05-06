@@ -76,69 +76,62 @@ Current abbreviated live response to that call:
 
 ## Attribute search
 
-### Request: Get [somewhere.beer/api/attributeSearch/abv-null_ibu-null_type-porter_brewery-null](https://somewhere.beer/api/attributeSearch/abv-null_ibu-null_type-porter_brewery-null)
+### Request: Get [http://somewhere.beer:80/WebAccess/api/attribueSearch?abv=&ibu=33&brewery=steam&type= ](http://somewhere.beer:80/WebAccess/api/attribueSearch?abv=&ibu=33&brewery=steam&type= )
 
-In this case, the type "Porter" was typed in on the attribute search menu.
+In this case, the search looked for beers that came from a brewery with steam in the name and a ibu of 33.
+Note all query parameters are reguired, thus for parameters that current search does not care about just asign no value.
+Note the parameter order is abv, ibu, brewery, type and thus order is to be maintained by all calls to the server.
+Note the brewery and type parameter are inclusive and non-case sensitive.
+Note if an integer value is given for the abv the decimal of the abv becomes inclusive. Thus a search abv of 5 would match on 5, 5.2, 5.9 ... but a search abv with the decimal is not inclusive. Thus a search of 5.5 would only match 5.5
 
-Example response:
+Current live response:
 ```json
 {
-  "attribSearchedFor": {
-    "abv": null,
-    "ibu": null,
-    "brewery": null,
-    "type": "porter"
-  },
-  "numberFound": 2,
-  "beers": [
-    {
-      "beerId": 1,
-      "beerName": "Edmund Fitzgerald Porter",
-      "beerStyle": "American Porter",
-      "brewery": "Great Lakes Brewing Co",
-      "ABV": 6.0,
-      "IBU": 37,
-      "featured": false,
-      "images": [
-        "/media/pictures/beer_1_photo1",
-        "/media/pictures/beer_1_photo2"
-      ],
-      "description": "Robust and complex,our Porter is a bittersweet tribute to the legendary freighter fallen crew--taken too soon when the gales of November came early.",
-      "staffReviews": [
-        {
-          "staffMember": "thomas",
-          "review": "A nice porter that doesn’t carry too heavy into the chocolate side of the roast flavor"
-        },
-        {
-          "staffMember": "david",
-          "review": "A enjoyable nice rich Porter, complex yet drinkable"
-        }
-      ],
+    "numberFound": 3,
+    "attriSearchedFor": {
+        "abv": null,
+        "brewry": "steam",
+        "type": "",
+        "ibu": 33
     },
-    {
-      "beerId": 458,
-      "beerName": "Anchor Porter",
-      "beerStyle": "American Porter",
-      "brewery": "Anchor Steam",
-      "ABV": 5.6,
-      "IBU": null,
-      "featured": false,
-      "images": [
-        "/media/pictures/beer_458_photo1"
-      ],
-      "description": "A blend of specially roasted pale, caramel, chocolate, and black malts, along with our top-fermenting yeast, creates complexity without bitterness. The brew is hopped at a high rate, and naturally carbonated. The result is dark in the glass, but surprisingly light on the palate.",
-      "staffReviews": [
+    "beers": [
         {
-          "staffMember": "thomas",
-          "review": "One of my favorite American dark beers"
+            "beerId": 1780,
+            "featured": false,
+            "images": null,
+            "ABV": 8.5,
+            "beerName": "Ale Epeteios",
+            "brewery": "Steamworks Brewing Company ",
+            "description": null,
+            "IBU": 33,
+            "staffReviews": null,
+            "beerStyle": "Golden or Blonde Ale"
         },
         {
-          "staffMember": "david",
-          "review": "Low head for a porter, but a very smooth finish and has a warm caramel smell to it"
+            "beerId": 28959,
+            "featured": false,
+            "images": null,
+            "ABV": 5.5,
+            "beerName": "Irish Red",
+            "brewery": "Steamworks Brewing Company ",
+            "description": null,
+            "IBU": 33,
+            "staffReviews": null,
+            "beerStyle": "Irish-Style Red Ale"
+        },
+        {
+            "beerId": 59433,
+            "featured": false,
+            "images": null,
+            "ABV": 5.1,
+            "beerName": "Winter Wonder",
+            "brewery": "Steamworks Brewing Company ",
+            "description": null,
+            "IBU": 33,
+            "staffReviews": null,
+            "beerStyle": "Specialty Stouts"
         }
-      ]
-    }
-  ]
+    ]
 }
 ```
 
