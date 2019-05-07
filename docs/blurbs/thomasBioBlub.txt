@@ -1,0 +1,4 @@
+﻿I am a Linux-loving, self-proclaimed code monkey (mostly writing java these days), home-brewer, and all around techie nerd. For this project I focussed on the backend writing both the HTTP api access and acting as the DBA.
+
+
+As far as beer preferences I tend to go for dark beers and IPAs for the most part. With that said there are few beers that I would call truly bad, and to quote my dad “... , and most of them are from Texas”
