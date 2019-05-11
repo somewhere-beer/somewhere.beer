@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="databaseCLI:jar">
-    <output-path>$PROJECT_DIR$/classes/artifacts/databaseCLI_jar</output-path>
+    <output-path>$USER_HOME$/serverDrop</output-path>
     <root id="archive" name="databaseCLI.jar">
       <element id="module-output" name="databaseCLI" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.jar" path-in-jar="/" />
