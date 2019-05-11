@@ -1,9 +1,6 @@
 package CLI;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.sql.*;
 import java.util.*;
 
@@ -52,6 +49,13 @@ public class BeerCLI {
                         fillBeer(beerCSV, "jdbc:mysql://localhost/beer_data", dbuser, dbpass);
                         break;
 
+                    case "fillStyle":
+                        System.out.println("Please give style.csv location");
+                        beerCSV = userInput.next();
+                        System.out.println("Filling style table");
+                        fillStyle(beerCSV, "jdbc:mysql://localhost/beer_data", dbuser, dbpass);
+                        break;
+
                     case "dellNoBeerBrew":
                         System.out.println("Removing breweries without a beer");
                         dellNoMatch("jdbc:mysql://localhost/beer_data", dbuser, dbpass);
@@ -71,6 +75,41 @@ public class BeerCLI {
 
             }
 
+
+    }
+
+    private static void fillStyle(String stylecsv, String databaseURL ,String user, String password){
+
+        try (FileReader fileReader = new FileReader(
+                new File(stylecsv))
+        ){
+
+            Class.forName("com.mysql.jdbc.Driver");
+
+            Connection conn = DriverManager.getConnection(databaseURL,  user, password);
+
+            Statement sqlStatement = conn.createStatement();
+            Scanner fileScan = new Scanner(fileReader);
+
+            while (fileScan.hasNext()) {
+                String line = fileScan.nextLine();
+                Scanner lineScaner = new Scanner(line);
+                lineScaner.useDelimiter(",");
+                String beerStyle = lineScaner.next();
+                sqlStatement.execute("INSERT INTO styles(style_id, style_name) VALUES (DEFAULT, \'"+ beerStyle + " \')");
+            }
+
+        } catch (FileNotFoundException e){
+            e.getStackTrace();
+        }
+        catch (ClassNotFoundException e){
+            e.printStackTrace();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
 
     }
 
@@ -229,7 +268,16 @@ public class BeerCLI {
                 if (breweryIdQ.next()) {
                     breweryID = breweryIdQ.getString(1);
                 }
-                String create = "INSERT INTO `beers`(`beer_id`, `brewery_id`, `beer_name`, `beer_style`, `beer_abv`, `is_featured`, `beer_ibu`) VALUES ( " + beers.get(i).sqlValues(breweryID) + ")";
+
+                //Getting the style id value
+                String getStyleId = "SELECT style_id FROM styles WHERE style_name = " + "'" + beers.get(i).getStyle() + "'";
+                ResultSet styleIdQ = sqlStatement.executeQuery(getStyleId);
+
+                String styleID = null;
+                if (styleIdQ.next()){
+                    styleID = styleIdQ.getString(1);
+                }
+                String create = "INSERT INTO `beers`(`beer_id`, `brewery_id`, `beer_name`, `style_id`, `beer_abv`, `is_featured`, `beer_ibu`) VALUES ( " + beers.get(i).sqlValues(breweryID, styleID) + ")";
                 sqlStatement.execute(create);
             }
 

@@ -83,7 +83,7 @@ public class Beer {
     }
 
 
-    public String sqlValues(String breweryID){
+    public String sqlValues(String breweryID, String style){
         StringBuilder outString = new StringBuilder("NULL, ");
         outString.append(breweryID + ", ");
         outString.append("'" + name + "', ");
