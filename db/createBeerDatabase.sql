@@ -12,19 +12,30 @@ CREATE TABLE brewery
     brewery_name VARCHAR(60) NOT NULL UNIQUE
 );
 
+--creating the style table
+CREATE TABLE styles
+(
+	style_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+	style_name VARCHAR(200) NOT NULL UNIQUE
+);
+
 -- creating the beer table
 CREATE TABLE beers
 (
     beer_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     brewery_id INT UNSIGNED,
     beer_name VARCHAR(200) NOT NULL,
-    beer_style VARCHAR(100) NOT NULL,
+    beer_style INT UNSIGNED, 
     beer_abv DECIMAL(4,2) NOT NULL,
     is_featured BOOLEAN DEFAULT FALSE,
     beer_ibu INT UNSIGNED,
+	light_dark ENUM('light', 'dark') DEFAULT NULL,
     CONSTRAINT beer_fk_brewery 
     	FOREIGN KEY (brewery_id) 
-    	REFERENCES brewery (brewery_id)
+    	REFERENCES brewery (brewery_id),
+CONSTRAINT beer_fk_styles
+	FOREIGN KEY (style_id) 
+	REFERNCES styles (style_id)		
 );
 
 -- creating the picture referance table
