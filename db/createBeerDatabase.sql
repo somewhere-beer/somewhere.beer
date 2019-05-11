@@ -12,7 +12,7 @@ CREATE TABLE brewery
     brewery_name VARCHAR(60) NOT NULL UNIQUE
 );
 
---creating the style table
+-- creating the style table
 CREATE TABLE styles
 (
 	style_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
@@ -25,7 +25,7 @@ CREATE TABLE beers
     beer_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     brewery_id INT UNSIGNED,
     beer_name VARCHAR(200) NOT NULL,
-    beer_style INT UNSIGNED, 
+    style_id INT UNSIGNED, 
     beer_abv DECIMAL(4,2) NOT NULL,
     is_featured BOOLEAN DEFAULT FALSE,
     beer_ibu INT UNSIGNED,
@@ -35,7 +35,7 @@ CREATE TABLE beers
     	REFERENCES brewery (brewery_id),
 CONSTRAINT beer_fk_styles
 	FOREIGN KEY (style_id) 
-	REFERNCES styles (style_id)		
+	REFERENCES styles (style_id)		
 );
 
 -- creating the picture referance table
