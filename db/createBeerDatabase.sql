@@ -67,3 +67,8 @@ CREATE TABLE staff_reviews
     	FOREIGN KEY (beer_id) 
     	REFERENCES beers (beer_id)
 );
+
+GRANT SELECT, INSERT, DELETE, UPDATE
+ON beer_data.*
+TO beerUser@localhost
+IDENTIFIED BY 'drinkUP';
