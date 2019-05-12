@@ -66767,6 +66767,9 @@ INSERT INTO `beers` (`beer_id`, `brewery_id`, `beer_name`, `style_id`, `beer_abv
 (59997, 1950, 'Wytchmaker', 115, '9.00', 0, NULL, NULL),
 (59998, 4844, 'X', 225, '5.50', 0, 18, 'light');
 
+DELETE FROM beers
+WHERE beers.brewery_id IS NULL;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
