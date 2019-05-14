@@ -147,8 +147,6 @@ WHERE beers.beer_id IN (SELECT staff_reviews.beer_id
 
 END//
 
-#Begining of the category procedures
-
 DELIMITER //
 
 CREATE PROCEDURE get_ipa()
@@ -1118,4 +1116,26 @@ BEGIN
         WHERE beers.brewery_id IS NULL;
 END//
 
+DELIMITER //
 
+CREATE PROCEDURE get_reviews
+    (
+     target_id INT UNSIGNED
+    )
+BEGIN
+    SELECT staff_revies.staff_member, staff_reviews.review
+    FROM staff_reviews
+    WHERE staff_reviews.beer_id = target_id;
+END //
+
+DELIMITER //
+
+CREATE PROCEDURE get_pictures
+    (
+      target_id INT UNSIGNED
+    )
+BEGIN
+   SELECT pictures.local_disk_location
+    FROM pictures
+    WHERE pictures.beer_id = target_id;
+END//
