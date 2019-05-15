@@ -103,6 +103,8 @@ WHERE beers.light_dark = 'dark';
 
 END//
 
+CALL get_light();
+
 # all the light beers
 
 DELIMITER //
@@ -584,28 +586,6 @@ END//
 # Beginning of the attribute search procedures
 
 #abv searching gives a matching range of target - 0.5 to target + 0.5
-DELIMITER //
-
-CREATE PROCEDURE get_by_abv
-    (
-    search_abv DECIMAL(4,2)
-    )
-
-BEGIN
-
-SELECT beers.beer_id, brewery.brewery_name, beers.beer_name,
-		styles.style_name, beers.beer_abv, beers.beer_ibu,
-        beers.is_featured, beers.light_dark, discriptions.description
-FROM brewery
-	JOIN beers
-    	ON brewery.brewery_id = beers.brewery_id
-        	 JOIN styles
-            	ON beers.style_id = styles.style_id
-                	LEFT JOIN discriptions
-                    	ON beers.beer_id = discriptions.beer_id
-WHERE beers.beer_abv BETWEEN (5.2 - 0.5) AND (5.2 + 0.5);
-
-END//
 
 DELIMITER //
 
