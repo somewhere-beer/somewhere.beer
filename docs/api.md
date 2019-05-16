@@ -243,3 +243,189 @@ Current live response:
     "beerStyle": "the best style"
 }
 ```
+## Get light
+
+### Request: Get [http://somewhere.beer/WebAccess/api/light](http://somewhere.beer/WebAccess/api/light)
+
+Returns a list of light beers
+
+Abbreviated example response to that call:
+```json
+{
+    
+    "lightBeers": [
+        {
+            "beerId": 54,
+            "featured": false,
+            "images": null,
+            "ABV": 5.7,
+            "beerName": "#amberale",
+            "brewery": "Mad Beach Craft Brewing Company ",
+            "description": null,
+            "IBU": null,
+            "staffReviews": null,
+            "beerStyle": "American-Style Amber/Red Ale"
+        },
+        {
+            "beerId": 80,
+            "featured": false,
+            "images": null,
+            "ABV": 5.8,
+            "beerName": "‘Merican",
+            "brewery": "Jekyll Brewing ",
+            "description": null,
+            "IBU": null,
+            "staffReviews": null,
+            "beerStyle": "American-Style Amber/Red Ale"
+        },
+        {
+            "beerId": 245,
+            "featured": false,
+            "images": null,
+            "ABV": 10.1,
+            "beerName": "11th Anniversary Ale",
+            "brewery": "Cigar City Brewing ",
+            "description": null,
+            "IBU": null,
+            "staffReviews": null,
+            "beerStyle": "American-Style Amber/Red Ale"
+        },
+        {
+            "beerId": 274,
+            "featured": false,
+            "images": null,
+            "ABV": 5.5,
+            "beerName": "13 Rebels ESB",
+            "brewery": "Crafty Dan ",
+            "description": null,
+            "IBU": 43,
+            "staffReviews": null,
+            "beerStyle": "American-Style Amber/Red Ale"
+        },
+        {
+            "beerId": 325,
+            "featured": false,
+            "images": null,
+            "ABV": 4.8,
+            "beerName": "1623 Brown Ale",
+            "brewery": "Coney Island Brewing Company ",
+            "description": null,
+            "IBU": 35,
+            "staffReviews": null,
+            "beerStyle": "American-Style Amber/Red Ale"
+        }
+    ]
+}
+``` 
+
+## Get dark
+
+### Request: Get [http://somewhere.beer/WebAccess/api/dark](http://somewhere.beer/WebAccess/api/dark)
+
+Returns a list of dark beers
+
+Abbreviated example response to that call:
+```json
+{
+    
+    "darkBeers": [
+        {
+            "beerId": 54,
+            "featured": false,
+            "images": null,
+            "ABV": 5.7,
+            "beerName": "#amberale",
+            "brewery": "Mad Beach Craft Brewing Company ",
+            "description": null,
+            "IBU": null,
+            "staffReviews": null,
+            "beerStyle": "American-Style Amber/Red Ale"
+        },
+        {
+            "beerId": 80,
+            "featured": false,
+            "images": null,
+            "ABV": 5.8,
+            "beerName": "‘Merican",
+            "brewery": "Jekyll Brewing ",
+            "description": null,
+            "IBU": null,
+            "staffReviews": null,
+            "beerStyle": "American-Style Amber/Red Ale"
+        },
+        {
+            "beerId": 245,
+            "featured": false,
+            "images": null,
+            "ABV": 10.1,
+            "beerName": "11th Anniversary Ale",
+            "brewery": "Cigar City Brewing ",
+            "description": null,
+            "IBU": null,
+            "staffReviews": null,
+            "beerStyle": "American-Style Amber/Red Ale"
+        },
+        {
+            "beerId": 274,
+            "featured": false,
+            "images": null,
+            "ABV": 5.5,
+            "beerName": "13 Rebels ESB",
+            "brewery": "Crafty Dan ",
+            "description": null,
+            "IBU": 43,
+            "staffReviews": null,
+            "beerStyle": "American-Style Amber/Red Ale"
+        },
+        {
+            "beerId": 325,
+            "featured": false,
+            "images": null,
+            "ABV": 4.8,
+            "beerName": "1623 Brown Ale",
+            "brewery": "Coney Island Brewing Company ",
+            "description": null,
+            "IBU": 35,
+            "staffReviews": null,
+            "beerStyle": "American-Style Amber/Red Ale"
+        }
+    ]
+}
+```
+
+## Get light
+
+### Request: Get [http://somewhere.beer/WebAccess/api/light](http://somewhere.beer/WebAccess/api/featured)
+
+Returns a list of light beers
+
+Current live response to that call:
+```json
+{
+    "reviewedBeers": [
+        {
+            "beerId": 1,
+            "featured": true,
+            "images": [
+                "/media/notarealpic.jpeg"
+            ],
+            "ABV": 5.6,
+            "beerName": "Test beer",
+            "brewery": "Testing Lab",
+            "description": "This beer is a test",
+            "IBU": 33,
+            "staffReviews": [
+                {
+                    "staffMember": "thomas",
+                    "review": "It was a good imeginary beer, if only it was real"
+                },
+                {
+                    "staffMember": "thomas",
+                    "review": "It was a good imeginary beer, if only it was real"
+                }
+            ],
+            "beerStyle": "Imaginary"
+        }
+    ]
+}
+``` 
