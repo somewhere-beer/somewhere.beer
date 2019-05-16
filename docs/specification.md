@@ -37,12 +37,8 @@ Will be present on all pages.
 Top and center will be a search bar, providing an easy and prominent entry point for users who know what they're looking for (or are willing to explore the results).
 
 Also centered and just below the search bar is the quick category box. This will aid in broad-stroke browsing to our category pages. The current working categories are:
-
-- Black and tan
 - Dark
 - Light
-- IPA
-- Malt 
 - Staff-reviewed
 
 The lower-left majority of the landing page is the featured beer section, titled “Featured Beer”. Below the title will be a short text element describing why the beer is featured, followed by an excerpt of information from the beer’s page and closing with a hyperlink to said beer page. Lastly, the lower right will hold the attribute search box. The controls of this search box are yet to be nailed down, but some attributes we know we want to be searchable include:
@@ -57,7 +53,7 @@ The lower-left majority of the landing page is the featured beer section, titled
 
 #### Category page
 
-Beginning right below the navbar will be the title of the category. Below that will be a paragraph or paragraphs giving a description of the category, followed by an expandable list of subcategories. At the deepest level of each subcategory will be a bullet list of beers belonging to that subcategory, each linked to the page for that beer. Lastly, there will be a bullet list of beers that belong to a category but don't belong to any of its subcategories, each linked to the page for that beer.
+Beginning right below the navbar will be the title of the category, followed by an expandable list of subcategories. At the deepest level of each subcategory will be a bullet list of beers belonging to that subcategory, each linked to the page for that beer. Lastly, there will be a bullet list of beers that belong to a category but don't belong to any of its subcategories, each linked to the page for that beer.
 
 #### Results page
 
