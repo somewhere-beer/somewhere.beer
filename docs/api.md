@@ -83,7 +83,7 @@ In this case, the search looked for beers that came from a brewery with steam in
 Note all query parameters are reguired, thus for parameters that current search does not care about just asign no value.
 Note the parameter order is abv, ibu, brewery, type and thus order is to be maintained by all calls to the server.
 Note the brewery and type parameter are inclusive and non-case sensitive.
-Note if an integer value is given for the abv the decimal of the abv becomes inclusive. Thus a search abv of 5 would match on 5, 5.2, 5.9 ... but a search abv with the decimal is not inclusive. Thus a search of 5.5 would only match 5.5
+Note abv will match in a range of plus or minus 0.5 of the give abv. Thus a search abv of 5 would match on 5, 4.5, 5.5 .
 
 Current live response:
 ```json
