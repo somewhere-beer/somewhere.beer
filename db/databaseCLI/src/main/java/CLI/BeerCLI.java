@@ -1,6 +1,9 @@
 package CLI;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.*;
 import java.util.*;
 
@@ -120,7 +123,7 @@ public class BeerCLI {
         try {
             System.out.println("Please the id of the beer");
             beerId = Integer.parseInt(userInput.nextLine());
-
+System.out.println(beerId);
             System.out.println("Please give the description");
             description = userInput.nextLine();
 
@@ -130,7 +133,7 @@ public class BeerCLI {
 
             Statement sqlStatement = conn.createStatement();
 
-            String descriptionQ = "INSERT INTO discriptions(beer_id, description) VALUES ("+beerId+", '"+ description +"')";
+            String descriptionQ = "INSERT INTO discriptions VALUES ("+beerId+", '"+ description +"')";
 
             sqlStatement.execute(descriptionQ);
 
