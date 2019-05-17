@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <h1>MEET THE CROW</h1>
+    <h1>MEET THE CREW</h1>
     <hr>
       <div class="row">
 
@@ -13,13 +13,13 @@
 
           <div class="col-lg-4">
             <h2>Lisa</h2>
-            <p>I'm a beginnig programmer interested in entering the world of computing, studying Java and Sustainability part-time and working full-time in the catering industry. I enjoy fresh, hoppy beers as well as a few smoother flavors and the occasional crisp, light-bodied beer. I'm interested in ecologically-minded breweries and foreign breweries.
+            <p>I'm a beginning programmer interested in entering the world of computing, studying Java and Sustainability part-time and working full-time in the catering industry. I enjoy fresh, hoppy beers as well as a few smoother flavors and the occasional crisp, light-bodied beer. I'm interested in ecologically-minded breweries and foreign breweries.
             </p>
           </div>
 
           <div class="col-lg-4">
             <h2>David</h2>
-            <p>
+            <p>I'm a former startup operations guy who decided to make the jump over to the engineering side of things. I'm actively looking for junior-level web development opportunities, especially with stacks using Python. When it comes to drinks, I'm more of a wine and whiskey kind of guy, but I've been known to enjoy an amber ale or IPA from time to time.
             </p>
           </div>
 
