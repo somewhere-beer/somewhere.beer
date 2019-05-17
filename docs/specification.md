@@ -5,7 +5,7 @@
 
 ### Non-Goals:
 
-User accounts, user reviews, and user-submitted content were all considered in the earliest planning stages of this project, but were ultimately rejected due to concerns over scope. As described below, the site represents the minimum viable product of a "beer encyclopedia." Given additional time and resources, userland features like registering and managing accounts, submitting beer ratings and tasting notes, and adding or editing beer entries would be considered high-priority additions.
+User accounts, user reviews, and user-submitted content were all considered in the earliest planning stages of this project, but were ultimately rejected due to concerns over scope. As described below, the site represents the minimum viable product of a "beer encyclopedia." Given additional time and resources, userland features like registering and managing accounts, submitting beer ratings and tasting notes, and adding or editing beer entries would be considered high-priority additions. Beer images would also be a high priority.
 
 ### User Stories
 
@@ -29,26 +29,26 @@ Will be present on all pages.
 - Logo (links to landing page)
 - Links:
     - About
-    - GitHub
     - License
 
 #### Landing page 
 
 Top and center will be a search bar, providing an easy and prominent entry point for users who know what they're looking for (or are willing to explore the results).
 
-Also centered and just below the search bar is the quick category box. This will aid in broad-stroke browsing to pages of the following:
-- Dark Beers
-- Light Beers
-- Staff-reviewed Beers
+Also centered and just below the search bar is the quick category list. This will aid in broad-stroke browsing to pages of the following:
+- Ale
+- Lager
+- Hybrid
+- Barleywine
+- Cider
+- Amber
 
-The lower-left majority of the landing page is the featured beer section, titled “Featured Beer”. Below the title will be a short text element describing why the beer is featured, followed by an excerpt of information from the beer’s page and closing with a hyperlink to said beer page. Lastly, the lower right will hold the attribute search box. The controls of this search box are yet to be nailed down, but some attributes we know we want to be searchable include:
+The lower-left majority of the landing page is the featured beer section, titled “Featured Beer”. Below the title will be a short text element describing why the beer is featured, followed by an excerpt of information from the beer’s page and closing with a hyperlink to said beer page. Lastly, the lower right will hold the attribute search box. The controls of this search box include:
 
 - ABV
 - IBU
 - Beer type (i.e., ale or lager)
 - Beer style category (subtype from ale or lager; e.g., IPA, porter, stout)
-- Beer style (e.g., American Porter, German Hefeweizen)
-- Country of origin
 - Brewery
 
 #### Category page
@@ -61,11 +61,11 @@ This page will have a title of “Found `x` results matching your search”. Bel
 
 #### Beer page
 
-Beginning right below the navbar on the top center will be the name of the beer. Below this title on the upper-left will be where any pictures we have of the beer will be displayed. (If we have more than one picture, toggle controls will be displayed at the bottom of the picture; otherwise, a caption will be displayed.) On the right of the picture will be a bullet list of the beer’s key attributes. Centered on the page below these elements will be a description of the beer. If there are staff tasting notes for the beer, they will be presented below the beer description. Staff tasting notes will be labeled with a staff member's name and avatar, followed by their tasting notes.
+Beginning right below the navbar on the top center will be the name of the beer. There will be a bullet list of the beer’s key attributes. Centered on the page below these elements will be a description of the beer. If there are staff tasting notes for the beer, they will be presented below the beer description. Staff tasting notes will be labeled with a staff member's name followed by their tasting notes.
 
 #### About Us page
 
-At the top of the page, there will a title of "About Us," followed by some information about the project and site. The next element shall be a “Team members” section header, followed by a short block for each team member. Each team member's block will contain the team member’s name, a picture, and some brief text.
+At the top of the page, there will a title of "About Us". The next element shall be a “Team members” section header, followed by a short block for each team member. Each team member's block will contain the team member’s name and some brief text.
 
 #### License page
 

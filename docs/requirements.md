@@ -11,7 +11,7 @@
 - Staff-reviewed beers category
 - Featured beer element on landing page
 - Staff-reviewed element on beer pages
-- Images on beer pages
+
 
 ### Nice to Have:
 
@@ -22,3 +22,4 @@
 - User accounts
 - User ratings
 - User-submitted content
+- Images on beer pages
